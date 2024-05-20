@@ -7,4 +7,14 @@ layout:
 - go.kubebuilder.io/v4
 projectName: clusterscan
 repo: github.com/VictorLoy/ClusterScan
+resources:
+- api:
+    crdVersion: v1
+    namespaced: true
+  controller: true
+  domain: example.com
+  group: clusterscan
+  kind: ClusterScan
+  path: github.com/VictorLoy/ClusterScan/api/v1
+  version: v1
 version: "3"
