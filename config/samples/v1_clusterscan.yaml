@@ -6,4 +6,13 @@ metadata:
     app.kubernetes.io/managed-by: kustomize
   name: clusterscan-sample
 spec:
-  # TODO(user): Add fields here
+  schedule: "*/1 * * * *" # Run every minute
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          containers:
+          - name: example-container
+            image: busybox
+            command: ["echo", "Hello from the ClusterScan job!"]
+          restartPolicy: Never
