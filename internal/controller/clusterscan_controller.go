@@ -74,8 +74,6 @@ func (r *ClusterScanReconciler) Reconcile(ctx context.Context, req ctrl.Request)
 func (r *ClusterScanReconciler) ReconcileWithSchedule(ctx context.Context, clusterScan *victortestv1.ClusterScan) (ctrl.Result, error) {
 	log := log.FromContext(ctx)
 
-	log.Info("Hitting this S")
-
 	cronJob := &batchv1.CronJob{
 		ObjectMeta: metav1.ObjectMeta{
 			Namespace: clusterScan.Namespace,
