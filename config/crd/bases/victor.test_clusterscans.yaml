@@ -8046,9 +8046,6 @@ spec:
               lastRunTime:
                 format: date-time
                 type: string
-              lastScheduleTime:
-                format: date-time
-                type: string
             type: object
         type: object
     served: true

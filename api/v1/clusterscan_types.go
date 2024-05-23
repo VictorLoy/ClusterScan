@@ -38,7 +38,6 @@ type ClusterScanStatus struct {
 
 	// Important: Run "make" to regenerate code after modifying this file
 	CompletionStatus string       `json:"completionStatus,omitempty"`
-	LastScheduleTime *metav1.Time `json:"lastScheduleTime,omitempty"`
 	LastRunTime      *metav1.Time `json:"lastRunTime,omitempty"`
 }
 
